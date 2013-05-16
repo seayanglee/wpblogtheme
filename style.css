@@ -9,7 +9,7 @@ Version: MyBlogTheme beta1.0
 
 /* ========== global ========== */
 body {
-	margin:0px; padding:0px; font:12px/1.5 Tahoma,'微软雅黑',Arial,sans-serif; background-color:white;
+	margin:0px; padding:0px; font:12px/1.5 Tahoma,'微软雅黑',Arial,sans-serif; background-color:#f8fcff;
 }
 a {
 	text-decoration:none; color:#39C;
@@ -57,10 +57,10 @@ h1#sitetitle, h2#sitetitle {
 	height:80px; line-height:80px; display:inline;
 }
 h1#sitetitle a, h2#sitetitle a {
-	font-size:36px; font-style:italic; text-shadow:1px 1px 1px white; color:#555; -webkit-transition:color .5s linear; -moz-transition:color .5s linear; -o-transition:color .5s linear; transition:color .5s linear;
+	font-size:36px; font-style:italic; text-shadow:1px 1px 1px white; color:#333; -webkit-transition:color .5s linear; -moz-transition:color .5s linear; -o-transition:color .5s linear; transition:color .5s linear;
 }
 h1#sitetitle a:hover, h2#sitetitle a:hover {
-	color:#39C !important;
+	color:#369 !important;
 }
 h1#article, h2#article {
 	line-height:40px; font-size:24px; border-bottom:1px solid #369; margin:5px 0px; color:black;
@@ -135,7 +135,10 @@ h1#article a:hover, h2#article a:hover {
 	text-indent:2em; line-height:26px;
 }
 .div_content_posttext p#light {
-	background-color:#FF9; border:1px solid #AAA; padding:3px;
+	text-indent:0; background-color:#FF9; border:1px solid #AAA; padding:3px;
+}
+.div_content_posttext p#picture {
+	text-indent:0; border:1px solid #AAA; display:inline-block; padding:3px;
 }
 .div_content_posttext a {
 	text-decoration:underline;
@@ -147,10 +150,10 @@ h1#article a:hover, h2#article a:hover {
 	list-style:decimal inside none; margin-left:2em;
 }
 .div_content_posttext code {
-	border:1px solid #AAA; font-size:12px; background-color:#EEE; padding:1px; margin:auto 2px;
+	border:1px solid #AAA; font-size:13px; background-color:#EEE; padding:1px; margin:auto 2px; font-family:Consolas,Courier,monospace;
 }
 .div_content_posttext pre {
-	overflow:auto; border:1px solid #AAA; font-size:12px; background-color:#EEE; padding:3px;
+	overflow:auto; border:1px solid #AAA; font-size:13px; background-color:#EEE; padding:3px; font-family:Consolas,Courier,monospace;
 }
 .div_content_posttext pre#autobreak {
 	white-space:pre-wrap; white-space:-moz-pre-wrap; white-space:-pre-wrap; white-space:-o-pre-wrap; word-wrap:break-word; 

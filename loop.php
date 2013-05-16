@@ -65,6 +65,9 @@
 <?php endwhile; // End the loop. Whew. ?>
 
 <?php /* 显示翻页超链接 */ ?>
+
+<?php wp_pagebar(array('before'=>'Page: ', 'after'=>' ', 'tooltip'=>true, 'tooltip_text'=>'Page'))?>
+
 <?php if ( $wp_query->max_num_pages > 1 ) : ?>
 	<div id="nav-below" class="div_content_pagelink1">
 		<div style="float:left"><?php previous_posts_link( '<<前一页(更新的内容)' ); ?></div>
