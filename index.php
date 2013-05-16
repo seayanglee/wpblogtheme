@@ -2,19 +2,24 @@
 /*
  * @package WordPress
  * @subpackage mytheme
- * @since mytheme 2.0
+ * @since mytheme 2.1
  */
 ?>
 
 <?php get_header(); ?>
-<div class="main" role="main">
-	<?php get_template_part( 'loop', 'index' ); ?>
-<?php if($wp_query->max_num_pages > 1) : ?>
-	<div class="article">
-		<div class="article-pgnum">
-			<?php postbar(); ?>
-		</div><!-- END .article-pgnum -->
-	</div><!-- END .article -->
-<?php endif; ?>
-</div><!-- END .main -->
+
+<section class="main">
+<?php
+while(have_posts()) :
+	the_post();
+	get_template_part('content', 'index');
+	if($wp_query->max_num_pages > 1) : ?>
+	<nav class="section pagenav">
+		<?php postbar(); ?>
+	</nav>
+	<?php endif; 
+endwhile;
+?>
+</section>
+
 <?php get_footer(); ?>

@@ -2,33 +2,32 @@
 /*
  * @package WordPress
  * @subpackage mytheme
- * @since mytheme 2.0
+ * @since mytheme 2.1
  */
 ?>
 
 <?php
-	if(    !is_active_sidebar('first-footer-widget-area')
-		&& !is_active_sidebar('second-footer-widget-area')
-		&& !is_active_sidebar('third-footer-widget-area')
-	)
-		return;
-	if(is_active_sidebar('first-footer-widget-area')):
-?>
-	<div id="first" class="bottom-box-middle">
+if(    !is_active_sidebar('first-footer-widget-area')
+	&& !is_active_sidebar('second-footer-widget-area')
+	&& !is_active_sidebar('third-footer-widget-area')
+) return;
+
+if(is_active_sidebar('first-footer-widget-area')) : ?>
+	<div class="footbar-narrow">
 		<?php dynamic_sidebar('first-footer-widget-area'); ?>
-	</div><!-- END .bottom-box-middle -->
+	</div>
 <?php
-	endif;
-	if(is_active_sidebar('second-footer-widget-area')):
-?>
-	<div id="second" class="bottom-box-large">
+endif;
+
+if(is_active_sidebar('second-footer-widget-area')) : ?>
+	<div class="footbar-wide">
 		<?php dynamic_sidebar('second-footer-widget-area'); ?>
-	</div><!-- END .bottom-box-large -->
+	</div>
 <?php
-	endif;
-	if(is_active_sidebar('third-footer-widget-area')):
-?>
-	<div id="third" class="bottom-box-middle">
+endif;
+
+if(is_active_sidebar('third-footer-widget-area')) : ?>
+	<div id="third" class="footbar-narrow">
 		<?php dynamic_sidebar('third-footer-widget-area'); ?>
-	</div><!-- END .bottom-box-middle -->
+	</div>
 <?php endif; ?>

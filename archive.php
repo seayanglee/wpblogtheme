@@ -2,50 +2,46 @@
 /*
  * @package WordPress
  * @subpackage mytheme
- * @since mytheme 2.0
+ * @since mytheme 2.1
  */
 ?>
 
 <?php get_header(); ?>
 
-
-
-
-		<div id="container">
-			<div id="content" role="main">
-
-<?php if ( have_posts() )
-		the_post();
-?>
-
-			<h1 class="page-title">
-<?php if ( is_day() ) : ?>
-				<?php printf( __( 'Daily Archives: <span>%s</span>', 'twentyten' ), get_the_date() ); ?>
-<?php elseif ( is_month() ) : ?>
-				<?php printf( __( 'Monthly Archives: <span>%s</span>', 'twentyten' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'twentyten' ) ) ); ?>
-<?php elseif ( is_year() ) : ?>
-				<?php printf( __( 'Yearly Archives: <span>%s</span>', 'twentyten' ), get_the_date( _x( 'Y', 'yearly archives date format', 'twentyten' ) ) ); ?>
-<?php else : ?>
-				<?php _e( 'Blog Archives', 'twentyten' ); ?>
-<?php endif; ?>
-			</h1>
-
-<?php
-	/* Since we called the_post() above, we need to
-	 * rewind the loop back to the beginning that way
-	 * we can run the loop properly, in full.
-	 */
+<section class="main">
+<?php if(have_posts()) : the_post(); ?>
+	<header class="section fore">
+		<p class="fore-text"><?php
+		if(is_day()) :
+			printf('日期“%1$s”的文章（%2$s篇）：', get_the_date(), $wp_query->found_posts);
+		elseif(is_month()) :
+			printf('月份“%1$s”的文章（%2$s篇）：', get_the_date(), $wp_query->found_posts);
+		elseif(is_year()) :
+			printf('年份“%1$s”的文章（%2$s篇）：', get_the_date(), $wp_query->found_posts);
+		else :
+			printf('归档文章（%1$s篇）：', $wp_query->found_posts);
+		endif;
+		?></p>
+	</header>
+	<?php
 	rewind_posts();
+	while(have_posts()) :
+		the_post();
+		get_template_part('content', 'archive');
+	endwhile;
+	if($wp_query->max_num_pages > 1) : ?>
+	<nav class="section pagenav">
+		<?php postbar(); ?>
+	</nav>
+	<?php endif;
+else : ?>
+	<header class="section fore">
+		<p class="fore-text">Sorry，没有查询到相关内容的文章！</p>
+	</header>
+	<article class="section article" style="height:300px;">
+		
+	</article>
+<?php endif; ?>	
+</section>
 
-	/* Run the loop for the archives page to output the posts.
-	 * If you want to overload this in a child theme then include a file
-	 * called loop-archive.php and that will be used instead.
-	 */
-	 get_template_part( 'loop', 'archive' );
-?>
-
-			</div><!-- #content -->
-		</div><!-- #container -->
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
