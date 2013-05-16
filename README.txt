@@ -5,5 +5,5 @@ author :	seayanglee@gmail.com
 license :	GNU General Public License
 site :		http://www.lsychina.com/
 version :	1.0
-update :	Sep 28th 22:09 2012
+update :	Oct 13th 14:56 2012
 

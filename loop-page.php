@@ -17,9 +17,10 @@
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 	<div id="post-<?php the_ID(); ?>" class="div_content_post" >
-		<h1>
+		<h1 id="article">
 			<?php the_title(); ?>
-			<?php edit_post_link( '编辑内容', '<span style="font-size:12px; margin-left:20px;">', '</span>' ); //编辑超链接 ?></h1>
+			<?php edit_post_link( '编辑内容', '<span style="font-size:12px; margin-left:20px;">', '</span>' ); //编辑超链接 ?>
+		</h1>
 		<div class="div_content_posttext">
 			<?php the_content(); ?>
 		</div><!-- END '.div_content_posttext' -->

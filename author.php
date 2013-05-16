@@ -14,12 +14,12 @@
 	<div id="content" role="main" class="div_frame_content div_content_halfwidth">
 		<?php if ( have_posts() ) :
 			the_post(); ?>
-			<h2 style="border-bottom:none;"><?php printf( '“%s”&nbsp;的文章：', get_the_author() ); ?></h2>
+			<h3 style="border-bottom:none;"><?php printf( '“%s”&nbsp;的文章：', get_the_author() ); ?></h3>
 			<?php
 			rewind_posts();
 			get_template_part( 'loop', 'author' );
 		else : ?>
-			<h2 style="border-bottom:none;">Sorry，这个作者很懒，什么也没写。</h2>
+			<h3 style="border-bottom:none;">Sorry，这个作者很懒，什么也没写。</h3>
 		<?php endif; ?>
 	</div> <!--END '#content' '.div_frame_content' -->
 	<?php get_sidebar(); ?>

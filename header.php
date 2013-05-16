@@ -11,26 +11,19 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>" />
 <title>
 	<?php
-	wp_title( '|', true, 'right' );
+	wp_title( ' - ', true, 'right' );
 	bloginfo( 'name' );
-	echo ' | ', get_bloginfo( 'description', 'display' );
+	echo " - ";
+	bloginfo( 'description' );
 	?>
 </title>
-<script type="text/javascript" src="http://www.lsychina.com/wp-content/themes/twentyten/js/jquery.js"></script>
-<script type="text/javascript">
-$(document).ready(function () {
-	var containerdiv = $('#wrapper');
-	containerdiv.css('backgroundPosition', '0 0');
-	var bgscroll = function () {
-		var current = parseInt(containerdiv.css('backgroundPosition').split(' ')[0]), newBgPos = (current + 2) + 'px 0px';
-		containerdiv.css('backgroundPosition', newBgPos);
-	};
-	setInterval(bgscroll, 50);
-});
-</script>
+<?php if ( is_home() ) : ?>
+<meta name="keywords" content="yang仔,旸仔,李司旸" />
+<meta name="description" content="yang仔博客，关注linux系统的使用、开发。对于桌面应用、服务器、嵌入式、物联网等事物感兴趣。点滴记录我的linux及计算机学习过程中的酸甜苦辣，分享我的学习成果与感悟!" />
+<?php endif; ?>
+<meta charset="<?php bloginfo( 'charset' ); ?>" />
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -38,11 +31,17 @@ $(document).ready(function () {
 /* We add some JavaScript to pages with the comment form
  * to support sites with threaded comments (when in use).
  */
-if ( is_singular() && get_option( 'thread_comments' ) )
-	wp_enqueue_script( 'comment-reply' );
-
+if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' );
 wp_head();
 ?>
+<script type="text/javascript">
+var current = 0;
+function scrollBg() {
+	current += 2;
+	document.getElementById("wrapper").style.backgroundPosition = current + "px 0";
+}
+setInterval("scrollBg()", 70);
+</script>
 </head>
 
 <body>
@@ -50,12 +49,14 @@ wp_head();
 <div id="wrapper" class="div_frame_container">
 	<div id="header" class="div_frame_head">
 		<div id="branding" role="banner" class="div_head_sitetitle">
-			<div class="div_head_sitetitle"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?>&nbsp;<sup>beta3.0</sup></a></div>
+			<?php if( is_single() || is_page() ) : ?>
+			<h2 id="sitetitle"><a href="http://www.lsychina.com" title="<?php bloginfo( 'name' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h2>
+			<?php else : ?>
+			<h1 id="sitetitle"><a href="http://www.lsychina.com" title="<?php bloginfo( 'name' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<?php endif; ?>
+			<span><?php bloginfo( 'description' ); ?></span>
 		</div>
-		<div class="div_head_topbar">
-			<div id="access" role="navigation" class="div_head_topmenu">
-				<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
-			</div>
-			<div class="div_head_toplink"></div>
+		<div id="access" role="navigation" class="div_head_topbar">
+			<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
 		</div>
 	</div><!-- END '#header' '.div_frame_head' -->

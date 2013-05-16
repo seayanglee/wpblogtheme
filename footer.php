@@ -14,9 +14,10 @@
 <div id="footer" role="contentinfo" class="div_frame_foot">
 	<div class="div_foot_end">
 		<p><center>
-			<span><a href="http://www.lsychina.com" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>&copy;2012</span>
-			<span>使用<a href="http://wordpress.org" title="WordPress WebSite">WordPress</a>
+			<span><a href="http://www.lsychina.com" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>&nbsp;&copy;2012</span>
+			<span><a href="http://wordpress.org" title="WordPress WebSite">WordPress</a></span>
 			<span><script src="http://s11.cnzz.com/stat.php?id=4581226&web_id=4581226" language="JavaScript"></script></span>
+			<span><a href="http://www.lsychina.com/sitemap.xml" title="google xml sitemap">站点地图</a></span>
 		</center></p>
 	</div><!-- END '.div_foot_end' -->
 </div><!-- END '#footer' '.div_frame_foot' -->

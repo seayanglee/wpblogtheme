@@ -78,7 +78,7 @@ function twentyten_setup() {
 	add_editor_style();
 
 	// Post Format support. You can also use the legacy "gallery" or "asides" (note the plural) categories.
-	add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
+	// add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
 
 	// This theme uses post thumbnails
 	add_theme_support( 'post-thumbnails' );
@@ -272,13 +272,13 @@ function twentyten_comment( $comment, $args, $depth ) {
 		case '' : ?>
 			<li class="li_content_commentbox" id="li-comment-<?php comment_ID(); ?>">
 				<div id="comment-<?php comment_ID(); ?>">
-					<h3>
+					<h4>
 						<span><?php printf( '%s', get_comment_author_link() ); ?></span>
 						<span>于 <?php printf( '%1$s&nbsp;&nbsp;%2$s', get_comment_date(),  get_comment_time() ); ?> 说：</span>
 						<span style="float:right">
 							<?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 						</span>
-					</h3>
+					</h4>
 					<div class="div_content_commenttext">
 						<?php comment_text(); ?>
 					</div><!-- END '.div_content_commenttext' -->
@@ -312,8 +312,8 @@ function twentyten_widgets_init() {
 		'description' => __( 'The primary widget area', 'twentyten' ),
 		'before_widget' => '<div id="%1$s" class="div_sidebar_boxstyle1 %2$s">',
 		'after_widget' => '</div>',
-		'before_title' => '<h2>',
-		'after_title' => '</h2>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
 	) );
 
 	// Area 2, located below the Primary Widget Area in the sidebar. Empty by default.
@@ -323,8 +323,8 @@ function twentyten_widgets_init() {
 		'description' => __( 'The secondary widget area', 'twentyten' ),
 		'before_widget' => '<div id="%1$s" class="div_sidebar_boxstyle1 %2$s">',
 		'after_widget' => '</div>',
-		'before_title' => '<h2>',
-		'after_title' => '</h2>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
 	) );
 
 	// Area 3, located in the footer. Empty by default.
@@ -334,8 +334,8 @@ function twentyten_widgets_init() {
 		'description' => __( 'The first footer widget area', 'twentyten' ),
 		'before_widget' => '<div id="%1$s" class="div_sidebar_boxstyle1 %2$s">',
 		'after_widget' => '</div>',
-		'before_title' => '<h2>',
-		'after_title' => '</h2>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
 	) );
 
 	// Area 4, located in the footer. Empty by default.
@@ -345,8 +345,8 @@ function twentyten_widgets_init() {
 		'description' => __( 'The second footer widget area', 'twentyten' ),
 		'before_widget' => '<div id="%1$s" class="div_sidebar_boxstyle1 %2$s">',
 		'after_widget' => '</div>',
-		'before_title' => '<h2>',
-		'after_title' => '</h2>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
 	) );
 }
 /** Register sidebars by running twentyten_widgets_init() on the widgets_init hook. */

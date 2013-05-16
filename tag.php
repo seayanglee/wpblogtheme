@@ -12,7 +12,7 @@
 
 <div id="main" class="div_frame_body">
 	<div id="content" role="main" class="div_frame_content div_content_halfwidth">
-		<h2 style="border-bottom:none;"><?php printf( '标签为&nbsp;“%s”&nbsp;的文章：', single_tag_title( '', false ) ); ?></h2>
+		<h3 style="border-bottom:none;"><?php printf( '标签为&nbsp;“%s”&nbsp;的文章：', single_tag_title( '', false ) ); ?></h3>
 		<?php get_template_part( 'loop', 'tag' ); ?>
 	</div> <!--END '#content' '.div_frame_content' -->
 	<?php get_sidebar(); ?>

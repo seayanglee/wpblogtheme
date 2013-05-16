@@ -21,7 +21,7 @@
 	endif; ?>
 
 	<?php if ( have_comments() ) : ?>
-		<h2 style="border-bottom:none;"><?php printf( '有 %1$s 条评论', get_comments_number() ); ?></h2>
+		<h3 style="border-bottom:none;"><?php printf( '有 %1$s 条评论', get_comments_number() ); ?></h3>
 
 		<ol>
 			<?php wp_list_comments( array( 'callback' => 'twentyten_comment' ) ); ?>
