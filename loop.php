@@ -140,7 +140,7 @@
 <?php /* 显示翻页超链接 */ ?>
 <?php if ( $wp_query->max_num_pages > 1 ) : ?>
 	<div id="nav-below" class="div_content_pagelink1">
-		<div style="float:left"><?php next_posts_link( __( '<<后一页(旧的内容)', 'twentyten' ) ); ?></div>
-		<div style="float:right"><?php previous_posts_link( __( '前一页(新的内容)>>', 'twentyten' ) ); ?></div>
+		<div style="float:left"><?php previous_posts_link( '<<前一页(更新的内容)' ); ?></div>
+		<div style="float:right"><?php next_posts_link( '(更旧的内容)后一页>>' ); ?></div>
 	</div><!-- END '.div_content_pagelink1' -->
 <?php endif; ?>

@@ -9,7 +9,7 @@ Version: MyBlogTheme beta1.0
 
 /* ========== global ========== */
 body {
-	margin:0px; padding:0px; font:12px/1.5 Tahoma,'微软雅黑',monospace,Arial,Verdana,sans-serif; background-color:white;
+	margin:0px; padding:0px; font:12px/1.5 Tahoma,'微软雅黑',monospace,Arial,sans-serif; background-color:white;
 }
 a {
 	text-decoration:none; color:#5DA7FF;
@@ -29,6 +29,9 @@ h1, h2, h3 {
 h1 a, h3 a {
 	color:black;
 }
+h4, h5 {
+	font-weight:bold; padding-left:6px;
+}
 h1 a:hover, h3 a:hover {
 	color:#5DA7FF;
 }
@@ -44,16 +47,23 @@ h3 {
 h3 span {
 	margin-right:10px;
 }
+h4 {
+	line-height:30px; font-size:16px; color:white; background-color:#5DA7FF; margin:8px;
+}
+h5 {
+	line-height:30px; font-size:16px; color:#369; margin:8px;
+}
 
 /* ========== frame ========== */
 .div_frame_container {
-	background-image:url("http://www.lsychina.com/img/img_bg_top.jpg"); background-repeat:no-repeat;
+	background-image:url("images/img_mvbg_top.jpg"); background-repeat:repeat-x;
 }
 .div_frame_head {
-	height:160px;
+	width:1000px; height:160px; margin:auto;
 }
 .div_frame_body {
-	width:1000px; background-color:white; margin:auto; border-radius:8px; box-shadow:0px 0px 15px #369; overflow:hidden;}
+	width:1000px; background-color:white; margin:auto; border:1px solid #39C; border-radius:8px; box-shadow:0px 0px 15px #369; overflow:hidden;
+}
 .div_frame_foot {
 	margin-top:5px; padding:12px;
 }
@@ -69,7 +79,10 @@ h3 span {
 	height:100px; position:relative;
 }
 .div_head_sitetitle a {
-	width:450px; height:60px; position:absolute; top:15px; left:8%; display:inline-block; font-size:38px; color:white; font-style:italic;
+	height:60px; position:absolute; top:15px; left:35px; display:inline-block; font-size:38px; font-style:italic; text-shadow:2px 2px 2px #666; color:white; -webkit-transition:color .5s linear; -moz-transition:color .5s linear; -o-transition:color .5s linear; transition:color .5s linear;
+}
+.div_head_sitetitle a:hover {
+	color:#FFD;
 }
 .div_head_topbar {
 	width:1000px; height:60px; margin:auto;
@@ -78,13 +91,13 @@ h3 span {
 	float:left; margin-left:35px;
 }
 .div_head_topmenu li {
-	float:left; margin-right:10px;
+	float:left; margin-right:12px;
 }
 .div_head_topmenu a {
-	width:90px; line-height:35px; border-radius:8px; display:block; text-align:center; font-size:15px; color:#369; background-color:white;
+	width:90px; line-height:34px; border-radius:8px; display:block; text-align:center; font-size:15px; color:#369; background-color:#EEE; background-image:-moz-linear-gradient(white,#DDD); background-image:-webkit-linear-gradient(white,#DDD); background-image:-o-linear-gradient(white,#DDD); background-image:linear-gradient(white,#DDD);
 }
 .div_head_topmenu a:hover {
-	background-color:#5DA7FF; color:white;
+	background:white;
 }
 .div_head_toplink {
 	height:38px; float:right;
@@ -102,10 +115,10 @@ h3 span {
 }
 .div_content_comment {}
 .div_content_address {
-	padding-bottom:30px; border-bottom-style:double; border-bottom-color:#369;
+	padding-bottom:20px; border-bottom-style:double; border-bottom-color:#369;
 }
 .div_content_address input {
-	width:310px;
+	width:410px;
 }
 
 /* ========== content [post] ========== */
@@ -122,7 +135,8 @@ h3 span {
 	list-style:disc outside none;
 }
 .div_content_posttext code {
-	background-color:#EEE; font-size:12px; margin:auto 3px;}
+	border:1px solid #AAA; font-size:12px; background-color:#EEE; padding:3px 1px; margin:auto 2px;
+}
 .div_content_posttext pre {
 	overflow:auto; border:1px solid #AAA; font-size:12px; background-color:#EEE; padding:3px;
 }
@@ -158,7 +172,7 @@ h3 span {
 	padding-bottom:20px;
 }
 .div_content_pagelink2 a {
-	line-height:20px; font-size:14px; display:inline-block;
+	width:280px; line-height:20px; font-size:14px; display:inline-block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;
 }
 .div_content_pagelink3 {
 	margin-top:20px;
@@ -191,12 +205,24 @@ h3 span {
 }
 
 /* ========== foot ========== */
-.div_foot_end {
-	border-top:2px solid #5DA7FF;
+.div_foot_end {}
+.div_foot_end a {
+	color:#888;
+}
+.div_foot_end a:hover {
+	color:#5DA7FF;
+}
+.div_foot_end span {
+	margin-left:10px; color:#888;
 }
 .a_foot_gototop {
-	width:60px; line-height:45px; display:block-inline; position:fixed; bottom:100px; right:5%; z-index:1000; text-align:center; color:white; background-color:#5DA7FF; border-radius:8px;
+	width:60px; line-height:45px; display:block-inline; position:fixed; bottom:70px; right:5%; z-index:1000; text-align:center; color:white; background-color:#369; border-radius:8px;
 }
 .a_foot_gototop:hover {
-	background-color:#369;
+	background-color:#5DA7FF;
+}
+
+/* ========== 强制 ========== */
+.tagcloud a {
+	font-size:14px !important;
 }

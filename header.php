@@ -19,6 +19,18 @@
 	echo ' | ', get_bloginfo( 'description', 'display' );
 	?>
 </title>
+<script type="text/javascript" src="http://www.lsychina.com/wp-content/themes/twentyten/js/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+	var containerdiv = $('#wrapper');
+	containerdiv.css('backgroundPosition', '0 0');
+	var bgscroll = function () {
+		var current = parseInt(containerdiv.css('backgroundPosition').split(' ')[0]), newBgPos = (current + 1) + 'px 0px';
+		containerdiv.css('backgroundPosition', newBgPos);
+	};
+	setInterval(bgscroll, 35);
+});
+</script>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -36,7 +48,7 @@ wp_head();
 <body>
 <a name="pagetop"></a>
 <div id="wrapper" class="div_frame_container">
-	<div id="header" class="div_frame_head"><div id="masthead">
+	<div id="header" class="div_frame_head">
 		<div id="branding" role="banner" class="div_head_sitetitle">
 			<div class="div_head_sitetitle"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?>&nbsp;<sup>beta3.0</sup></a></div>
 		</div>
@@ -46,4 +58,4 @@ wp_head();
 			</div>
 			<div class="div_head_toplink"></div>
 		</div>
-	</div></div><!-- END '#header' '.div_frame_head' -->
+	</div><!-- END '#header' '.div_frame_head' -->

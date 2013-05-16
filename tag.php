@@ -6,25 +6,16 @@
  * @subpackage Twenty_Ten
  * @since Twenty Ten 1.0
  */
-
-get_header(); ?>
-
-		<div id="container">
-			<div id="content" role="main">
-
-				<h1 class="page-title"><?php
-					printf( __( 'Tag Archives: %s', 'twentyten' ), '<span>' . single_tag_title( '', false ) . '</span>' );
-				?></h1>
-
-<?php
-/* Run the loop for the tag archive to output the posts
- * If you want to overload this in a child theme then include a file
- * called loop-tag.php and that will be used instead.
- */
- get_template_part( 'loop', 'tag' );
 ?>
-			</div><!-- #content -->
-		</div><!-- #container -->
 
-<?php get_sidebar(); ?>
+<?php get_header(); ?>
+
+<div id="main" class="div_frame_body">
+	<div id="content" role="main" class="div_frame_content div_content_halfwidth">
+		<h2 style="border-bottom:none;"><?php printf( '标签为&nbsp;“%s”&nbsp;的文章：', single_tag_title( '', false ) ); ?></h2>
+		<?php get_template_part( 'loop', 'tag' ); ?>
+	</div> <!--END '#content' '.div_frame_content' -->
+	<?php get_sidebar(); ?>
+</div><!-- END '#main' '.div_frame_body' -->
+
 <?php get_footer(); ?>

@@ -11,20 +11,17 @@
  * @subpackage Twenty_Ten
  * @since Twenty Ten 1.0
  */
+?>
 
-get_header(); ?>
+<?php get_header(); ?>
+
+
+
 
 		<div id="container">
 			<div id="content" role="main">
 
-<?php
-	/* Queue the first post, that way we know
-	 * what date we're dealing with (if that is the case).
-	 *
-	 * We reset this later so we can run the loop
-	 * properly with a call to rewind_posts().
-	 */
-	if ( have_posts() )
+<?php if ( have_posts() )
 		the_post();
 ?>
 
