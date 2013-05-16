@@ -1,30 +1,20 @@
 <?php
-/**
- * The template for displaying Archive pages.
- *
- * Used to display archive-type pages if nothing more specific matches a query.
- * For example, puts together date-based pages if no date.php file exists.
- *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
- *
+/*
  * @package WordPress
- * @subpackage Twenty_Ten
- * @since Twenty Ten 1.0
+ * @subpackage mytheme
+ * @since mytheme 2.0
  */
+?>
 
-get_header(); ?>
+<?php get_header(); ?>
+
+
+
 
 		<div id="container">
 			<div id="content" role="main">
 
-<?php
-	/* Queue the first post, that way we know
-	 * what date we're dealing with (if that is the case).
-	 *
-	 * We reset this later so we can run the loop
-	 * properly with a call to rewind_posts().
-	 */
-	if ( have_posts() )
+<?php if ( have_posts() )
 		the_post();
 ?>
 

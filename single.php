@@ -1,20 +1,20 @@
 <?php
-/**
- * The Template for displaying all single posts.
- *
+/*
  * @package WordPress
- * @subpackage Twenty_Ten
- * @since Twenty Ten 1.0
+ * @subpackage mytheme
+ * @since mytheme 2.0
  */
 ?>
 
 <?php get_header(); ?>
-
-<div id="main" class="div_frame_body">
-	<div id="content" role="main" class="div_frame_content div_content_halfwidth">
+<div class="main" role="main">
+	<div class="article">
 		<?php get_template_part( 'loop', 'single' ); ?>
-	</div> <!--END '#content' '.div_frame_content' -->
-	<?php get_sidebar(); ?>
-</div><!-- END '#main' '.div_frame_body' -->
-
+	</div><!-- END .article -->
+	<div class="article">
+		<div class="article-comment">
+			<h3 class="article-comment-title">暂时关闭评论（Sorry, Reply is Closed）!</h3>
+		</div><!-- END .article-comment -->
+	</div><!-- END .article -->
+</div><!-- END .main -->
 <?php get_footer(); ?>

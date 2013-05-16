@@ -1,30 +1,23 @@
 <?php
-/**
- * The template for displaying 404 pages (Not Found).
- *
+/*
  * @package WordPress
- * @subpackage Twenty_Ten
- * @since Twenty Ten 1.0
+ * @subpackage mytheme
+ * @since mytheme 2.0
  */
+?>
 
-get_header(); ?>
+<?php get_header(); ?>
 
-	<div id="container">
-		<div id="content" role="main">
-
-			<div id="post-0" class="post error404 not-found">
-				<h1 class="entry-title"><?php _e( 'Not Found', 'twentyten' ); ?></h1>
-				<div class="entry-content">
-					<p><?php _e( 'Apologies, but the page you requested could not be found. Perhaps searching will help.', 'twentyten' ); ?></p>
-					<?php get_search_form(); ?>
-				</div><!-- .entry-content -->
-			</div><!-- #post-0 -->
-
-		</div><!-- #content -->
-	</div><!-- #container -->
-	<script type="text/javascript">
-		// focus on search field after it has loaded
-		document.getElementById('s') && document.getElementById('s').focus();
-	</script>
+<div id="main" class="div_frame_body">
+	<div id="content" role="main" class="div_frame_content div_content_fullwidth">
+		<h5>ERROR404&nbsp;您所访问的页面不存在，您可以尝试在本站搜索其它相关内容。</h5>
+		<?php get_search_form(); ?>
+		<br /><br />
+		<h5>建议：由于本站近期改动了网站页面的后缀名，您可以尝试：</h5>
+		<p>1.访问页面后缀改为.html，例如访问的“www.lsychina.com/xxx/”页面不存在，可修改为“www.lsychina.com/xxx.html”试试看！</p>
+		<p>由此给您带来的不便，yang仔十分抱歉！-.-#</p>
+	</div> <!--END '#content' '.div_frame_content' -->
+</div><!-- END '#main' '.div_frame_body' -->
 
 <?php get_footer(); ?>
+

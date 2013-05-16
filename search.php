@@ -1,25 +1,29 @@
 <?php
-/**
- * The template for displaying Search Results pages.
- *
+/*
  * @package WordPress
- * @subpackage Twenty_Ten
- * @since Twenty Ten 1.0
+ * @subpackage mytheme
+ * @since mytheme 2.0
  */
 ?>
 
 <?php get_header(); ?>
-
-<div id="main" class="div_frame_body">
-	<div id="content" role="main" class="div_frame_content div_content_halfwidth">
-		<?php if ( have_posts() ) : ?>
-			<h2 style="border-bottom:none;"><?php printf( '“%s”&nbsp;的搜索结果：', get_search_query() ); ?></h2>
-			<?php get_template_part( 'loop', 'search' );
-		else : ?>
-			<h2 style="border-bottom:none;"><?php printf( '>_<&nbsp;&nbsp;Sorry，没有找到与&nbsp;“%s”&nbsp;相关的内容。', get_search_query() ); ?></h2>
-		<?php endif; ?>
-	</div> <!--END '#content' '.div_frame_content' -->
-	<?php get_sidebar(); ?>
-</div><!-- END '#main' '.div_frame_body' -->
-
+<div class="main" role="main">
+	<div class="article">
+		<div class="article-header"><?php printf('搜索“%1$s”的结果（%2$s篇）：', get_search_query(), $wp_query->found_posts); ?></div>
+	</div><!-- END .article -->
+<?php if(have_posts()) : 
+	get_template_part('loop', 'search');
+else : ?>
+	<div class="article">
+		<div class="article-content">抱歉，没有查询到相关内容的文章！（Sorry, no article found!）</div>
+	</div><!-- END .article -->
+<?php endif; ?>
+<?php if($wp_query->max_num_pages > 1) : ?>
+	<div class="article">
+		<div class="article-pgnum">
+			<?php postbar(); ?>
+		</div><!-- END .article-pgnum -->
+	</div><!-- END .article -->
+<?php endif; ?>
+</div><!-- END .main -->
 <?php get_footer(); ?>

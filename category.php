@@ -1,34 +1,29 @@
 <?php
-/**
- * The template for displaying Category Archive pages.
- *
+/*
  * @package WordPress
- * @subpackage Twenty_Ten
- * @since Twenty Ten 1.0
+ * @subpackage mytheme
+ * @since mytheme 2.0
  */
+?>
 
-get_header(); ?>
-
-		<div id="container">
-			<div id="content" role="main">
-
-				<h1 class="page-title"><?php
-					printf( __( 'Category Archives: %s', 'twentyten' ), '<span>' . single_cat_title( '', false ) . '</span>' );
-				?></h1>
-				<?php
-					$category_description = category_description();
-					if ( ! empty( $category_description ) )
-						echo '<div class="archive-meta">' . $category_description . '</div>';
-
-				/* Run the loop for the category page to output the posts.
-				 * If you want to overload this in a child theme then include a file
-				 * called loop-category.php and that will be used instead.
-				 */
-				get_template_part( 'loop', 'category' );
-				?>
-
-			</div><!-- #content -->
-		</div><!-- #container -->
-
-<?php get_sidebar(); ?>
+<?php get_header(); ?>
+<div class="main" role="main">
+	<div class="article">
+		<div class="article-header"><?php printf('分类“%1$s”的文章（%2$s篇）：', single_cat_title('', false), $wp_query->found_posts); ?></div>
+	</div><!-- END .article -->
+<?php if(have_posts()) : 
+	get_template_part('loop', 'category');
+else : ?>
+	<div class="article">
+		<div class="article-content">抱歉，没有查询到相关内容的文章！（Sorry, no article found!）</div>
+	</div><!-- END .article -->
+<?php endif; ?>
+<?php if($wp_query->max_num_pages > 1) : ?>
+	<div class="article">
+		<div class="article-pgnum">
+			<?php postbar(); ?>
+		</div><!-- END .article-pgnum -->
+	</div><!-- END .article -->
+<?php endif; ?>
+</div><!-- END .main -->
 <?php get_footer(); ?>

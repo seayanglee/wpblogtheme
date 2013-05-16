@@ -1,24 +1,20 @@
 <?php
-/**
- * The template for displaying all pages.
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
- *
+/*
  * @package WordPress
- * @subpackage Twenty_Ten
- * @since Twenty Ten 1.0
+ * @subpackage mytheme
+ * @since mytheme 2.0
  */
 ?>
 
 <?php get_header(); ?>
-
-<div id="main" class="div_frame_body">
-	<div id="content" role="main" class="div_frame_content div_content_fullwidth">
-			<?php get_template_part( 'loop', 'page' ); ?>
-			</div><!-- #content -->
-	</div> <!--END '#content' '.div_frame_content' -->
-</div><!-- END '#main' '.div_frame_body' -->
+<div class="main" role="main">
+	<div class="article">
+		<?php get_template_part( 'loop', 'page' ); ?>
+	</div><!-- END .article -->
+	<div class="article">
+		<div class="article-comment">
+			<h3 class="article-comment-title">暂时关闭评论（Sorry, Reply is Closed）!</h3>
+		</div><!-- END .article-comment -->
+	</div><!-- END .article -->
+</div><!-- END .main -->
 <?php get_footer(); ?>

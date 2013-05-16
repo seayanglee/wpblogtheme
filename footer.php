@@ -1,46 +1,52 @@
 <?php
-/**
- * The template for displaying the footer.
- *
- * Contains the closing of the id=main div and all content
- * after.  Calls sidebar-footer.php for bottom widgets.
- *
+/*
  * @package WordPress
- * @subpackage Twenty_Ten
- * @since Twenty Ten 1.0
+ * @subpackage mytheme
+ * @since mytheme 2.0
  */
 ?>
 
-<div id="footer" role="contentinfo" class="div_frame_foot">
-	<div class="div_foot_end">
-		<p>
-			<a href="http://www.lsychina.com" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>&nbsp;&nbsp;
-			Copyright&copy;&nbsp;2012&nbsp;&nbsp;请联系Email:siyanglee.lz@gmail.com
-			
-		</p>
-		<p>
-			采用<a href="http://wordpress.org" title="WordPress WebSite">WordPress</a>博客系统
-			使用主题:<a href="http://www.lsychina.com">MyBlogTheme Beta1.0</a> Based on <a href="http://wordpress.org/extend/themes/twentyten">TwentyTen</a>
-		</p>
-	</div><!-- END '.div_foot_end' -->
-</div><!-- END '#footer' '.div_frame_foot' -->
-</div><!-- END '#wrapper' '.div_frame_container' -->
-<div><a href="#pagetop" class="a_foot_gototop">回到顶部</a></div>
-
-<!-- BEGIN JiaThis Button -->
-<script type="text/javascript" >
-var jiathis_config={
-	siteNum:6,
-	sm:"fav,qzone,renren,douban,tsina,tqq",
-	summary:"",
-	showClose:true,
-	hideMore:true
-}
-</script>
-<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jiathis_r.js?type=left&btn=l.gif&move=1" charset="utf-8"></script>
-<!-- END JiaThis Button -->
-
-<?php wp_footer(); ?>
-
+		<div class="bottom">
+			<div class="bottom-box-middle">
+				<div class="bottom-widget">
+					<h3 class="bottom-title">关于博客（About Blog）</h3>
+					<p></p>
+				</div>
+			</div><!-- END .bottom-box-middle -->
+			<div class="bottom-box-large">
+				<?php get_sidebar( 'footer' ); ?>
+			</div><!-- END .bottom-box-large -->
+			<div class="bottom-box-middle">
+				<div class="bottom-widget">
+					<h3 class="bottom-title">关注（Attention）</h3>
+					<div style="text-align:center;">
+						<p><a href="http://get.fedoraproject.org/" target="_blank"><img title="Fedora18正式发布" src="./img/f18release.png"/></a></p>
+						<p><a href="http://www.ubuntu.com/" target="_blank"><img title="Ubuntu12.10正式发布" src="./img/banner3.png"/></a></p>
+					</div>
+				</div>
+				<div class="bottom-widget">
+					<h3 class="bottom-title">友情链接（Links）</h3>
+					<ul>
+						<li><a target="_blank" href="http://zhanglongqi.com/">Zhang Longqi's Blog</a></li>
+						<li><a target="_blank" href="http://www.x_mcu.mezoka.com/">ぐ浀蔠亼潵灬 的博客</a></li>
+					</ul>
+				</div>
+			</div><!-- END .bottom-box-middle -->
+		</div><!-- END .bottom -->
+		<div class="footer">
+			<center>
+				<span><a href="./" target="_blank" title="yang仔博客">yang仔博客</a> ©2012-2013</span>
+				<span><a href="http://wordpress.org" target="_blank" title="WordPress">WordPress</a></span>
+				<span><script src="http://s11.cnzz.com/stat.php?id=4581226&web_id=4581226" language="JavaScript"></script></span>
+				<span><a href="./sitemap.xml" target="_blank" title="站点地图">站点地图</a></span>
+				<span><a href="http://www.w3.org" target="_blank" title="HTML5">HTML5</a></span>
+			</center>
+		</div><!-- END .footer -->
+	</div><!-- END .right -->
+	<div class="loginout"><?php wp_loginout(); ?></div>
+    <div class="goto"><a href="javascript:gotoPageTop();">返回页面顶部<br/>Scroll to Top</a></div>
+    <script type="text/javascript">tagsColor();</script>
+    <?php wp_footer(); ?>
+</div>
 </body>
 </html>
