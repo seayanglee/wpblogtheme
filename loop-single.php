@@ -10,12 +10,12 @@
 	<div class="article-content">
 		<h1 class="article-title"><?php the_title(); ?></h1>
 		<span class="article-editbtn"><?php edit_post_link('编辑本文', '', ''); ?></span>
-		<div class="article-box-top">
+		<div class="article-box">
 			<!-- 文章作者、时间 -->
 			<?php mytheme_posted_on(); ?>
 			<!-- 文章分类、标签 -->
 			<?php mytheme_posted_in(); ?>
-		</div><!-- END .article-box-top -->
+		</div><!-- END .article-box -->
 		<div class="article-text">
 			<?php the_content(); ?>
 		</div><!-- END .article-text -->

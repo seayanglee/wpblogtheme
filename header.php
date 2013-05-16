@@ -10,7 +10,7 @@
 <html dir="ltr" lang="zh-CN">
 <head>
 <meta charset="UTF-8"/>
-<base href="<?php echo site_url(); ?>"/>
+<base href="<?php echo home_url(); ?>"/>
 <title><?php wp_title(' | ', true, 'right'); ?>yang仔博客 | share with you</title>
 <meta name="author" content="Siyang Lee">
 <?php if(is_home()) : ?>
@@ -54,10 +54,8 @@
 		<div class="search">
 			<?php get_search_form(); ?>
 		</div><!-- END .search -->
-		<div class="loginout"><?php wp_loginout(); ?></div>
-    	<div class="goto"><a href="javascript:void(0);" onClick="gotoPageTop()">返回页面顶部<br/>Scroll to Top</a></div>
 	</div><!-- END .left -->
-	
+
 	<div class="right">
 		<div id="menubar" class="menu" role="navigation">
 			<ul>

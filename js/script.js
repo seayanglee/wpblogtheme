@@ -111,11 +111,19 @@ function screenSize() {
 		document.getElementById("lefterea").style.position = "static";
 		document.getElementById("menubar").style.position = "static";
 		document.getElementById("blank").style.height = "89px";
+		with(document.getElementById("leftbottom").style) {
+			position = "absolute",
+			left = "-174px"
+		}
 	}
 	else {
 		document.getElementById("lefterea").style.position = "fixed";
 		document.getElementById("menubar").style.position = "fixed";
 		document.getElementById("blank").style.height = "115px";
+		with(document.getElementById("leftbottom").style) {
+			position = "fixed",
+			left = "33px"
+		}
 	}
 };
 window.onresize = screenSize;

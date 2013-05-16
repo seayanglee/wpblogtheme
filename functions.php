@@ -119,17 +119,29 @@ function mytheme_remove_recent_comments_style() {
 }
 add_action( 'widgets_init', 'mytheme_remove_recent_comments_style' );
 
+if (!function_exists('mytheme_posted_cat')) :
+/*
+ * 打印当前文章的分类，生成HTML代码
+ * @since mytheme 2.0
+ */
+function mytheme_posted_cat() {
+	if (count(get_the_category())) {
+		printf('%1$s', get_the_category_list(' '));
+	}
+}
+endif;
+
 if (!function_exists('mytheme_posted_on')) :
 /*
  * 打印当前文章的作者及时间，生成HTML代码
  * @since mytheme 2.0
  */
 function mytheme_posted_on() {
-	printf( '<a href="%1$s" title="查看%2$s的所有文章">%2$s</a> 发表于 <a href="%3$s" title="%4$s">%5$s</a>',
-		get_author_posts_url( get_the_author_meta( 'ID' ) ),
+	printf('<a href="%1$s" title="查看%2$s的所有文章">%2$s</a> 发表于 <a href="%3$s" title="%4$s">%5$s</a>',
+		get_author_posts_url(get_the_author_meta('ID')),
 		get_the_author(),
 		get_permalink(),
-		esc_attr( get_the_time() ),
+		esc_attr( get_the_time()),
 		get_the_date()
 	);
 }
@@ -146,7 +158,7 @@ function mytheme_posted_in() {
 	}
 	$tag_list = get_the_tag_list('<span name="tags">', '</span> <span name="tags">', '</span>');
 	if ($tag_list) {
-		printf('<label>关键词：</label>%1$s', $tag_list);
+		printf('<label>标签：</label>%1$s', $tag_list);
 	}
 }
 endif;

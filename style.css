@@ -8,7 +8,8 @@ License: GNU General Public License
 
 body {
 	width:100%; margin:0px; padding:0px;
-	font-family:'微软雅黑','文泉驿正黑','宋体'; font-size:14px; background-color:#f9f9f9;
+	font-family:'微软雅黑','文泉驿正黑','宋体'; font-size:14px;
+	background-color:#f9f9f9;
 }
 table {
 	border-collapse:collapse; border-spacing:0px;
@@ -26,7 +27,8 @@ ul, ol {
 	list-style:none; margin:0px; padding:0px;
 }
 h1, h2, h3, h4, h5, h6 {
-	line-height:normal; margin:0px; padding:0px; font-size:14px; font-weight:normal;
+	line-height:normal; margin:0px; padding:0px;
+	font-size:14px; font-weight:normal;
 }
 p {
 	margin:0px; padding:0px;
@@ -34,22 +36,8 @@ p {
 .wrapper {
 	width:1000px;
 }
-.loginout {
-	position:absolute; z-index:99; bottom:60px; left:35px;
-}
-.goto {
-	position:absolute; z-index:100; bottom:0px; left:35px;
-}
-.goto a {
-	width:135px; heihgt:50px; line-height:20px; display:block; padding:5px 0px;
-	text-align:center; color:#666;
-	background-color:#dfdfdf; border-radius:5px 5px 0px 0px;
-}
-.goto a:hover {
-	text-decoration:none; background-color:#eee;
-}
 .left {
-	width:200px; height:100%; position:relative; position:fixed; float:left;
+	width:200px; position:fixed; float:left;
 }
 .logo {
 	margin:30px auto; margin-bottom:0px;
@@ -107,7 +95,7 @@ p {
 	line-height:26px; text-align:center;
 }
 .search {
-	width:165px; margin:20px auto; margin-bottom:0px; padding-left:3px;
+	width:165px; margin:0px auto; margin-top:20px;
 	border:1px solid #ccc; border-radius:3px; box-shadow:0px 0px 2px #ccc;
 }
 .search label {
@@ -117,10 +105,11 @@ p {
 	height:22px; line-height:22px; font-family:'微软雅黑','文泉驿正黑','宋体'; font-size:12px;
 }
 .search input[type=text] {
-	width:120px; border:none; border-right:1px solid #ccc; background-color:white; padding-right:1px;
+	width:116px; padding-left:3px; padding-right:1px;
+	border:none; border-right:1px solid #ccc; background-color:white;
 }
 .search input[type=submit] {
-	width:33px; background:none; border:none; cursor:pointer; color:#666;
+	width:42px; background:none; border:none; cursor:pointer; color:#666;
 }
 .right {
 	width:800px; float:right;
@@ -197,6 +186,7 @@ p {
 	background-image:url("images/bird-arrow.png"); background-repeat:no-repeat;
 }
 .main {}
+
 /*********** article ***********/
 .article {
 	width:760px; margin:0px auto; margin-bottom:20px; padding:12px;
@@ -208,43 +198,29 @@ p {
 .article-header {
 	height:35px; line-height:35px; font-size:18px;
 }
-/*********** article-box-top ***********/
-.article-box-top {
+
+/*********** article-box ***********/
+.article-box {
 	height:50px; line-height:50px; padding:0px 1em;
 }
-.article-box-top label {
+.article-box label {
 	margin-left:20px;
 }
-.article-box-top a {
+.article-box a {
 	margin:0px 2px;
 }
-.article-box-top span {
-	line-height:26px; height:26px; margin:0px 2px; background:none !important;
-}
-.article-box-top span a {
-	margin:0px;
-}
-/*********** article-box-bottom ***********/
-.article-box-bottom {
-	margin-top:20px; height:50px; line-height:50px; padding:0px 1em;
-}
-.article-box-bottom label {
-	margin-left:15px;
-}
-.article-box-bottom a {
-	margin:0px 1px;
-}
-.article-box-bottom span {
+.article-box span {
 	line-height:26px; height:26px; padding:1px 1px; display:inline-block; margin:0px 1px;
 }
-.article-box-bottom span a {
+.article-box span a {
 	line-height:26px; height:26px; padding:0px 7px; display:inline-block; margin:0px;
 	color:black; font-size:14px;
 }
-.article-box-bottom span a:hover {
+.article-box span a:hover {
 	line-height:24px; height:24px; padding:0px 6px;
 	text-decoration:none; border:1px solid white;
 }
+
 /*********** article-container ***********/
 .article-container {
 	margin-top:40px;
@@ -276,6 +252,7 @@ p {
 	float:right; text-align:right;
 }
 .article-notice {}
+
 /*********** article-title ***********/
 .article-title {
 	line-height:50px; display:inline-block; font-size:24px; color:#333;
@@ -289,10 +266,70 @@ p {
 .article-editbtn {
 	height:50px; line-height:50px; float:right;
 }
+
 /*********** article-text ***********/
 .article-text {}
+.article-text h5 {
+	line-height:32px; margin-top:34px;
+	background-color:#39C;
+	font-size:18px; color:white; text-indent:1em;
+}
+.article-text h6 {
+	line-height:30px; margin:10px 0px;
+	font-size:16px; font-weight:bold; color:#39c; text-indent:1.5em;
+}
+.preview h5, .preview h6 {
+	line-height:30px; margin:10px 0px;
+	background-color:white;
+	font-size:16px; font-weight:normal; color:black; text-indent:2em;
+}
 .article-text p {
 	line-height:30px; margin:10px 0px; font-size:16px; text-indent:2em;
+}
+.picture, .article-text p#picture {
+	line-height:normal !important; margin:17px 1em !important;
+	text-indent:0px !important; text-align:center !important;
+}
+.picture img, .article-text p#picture img {
+	border:1px solid #666 !important;
+}
+.picture span, .article-text p#picture span {
+	line-height:32px !important; display:block !important;
+	color:#666 !important; font-size:14px !important; font-weight:bold !important;
+}
+.side, .article-text p#side {
+	line-height:22px !important; margin:17px 1em !important; padding:8px !important;
+	font-size:14px !important; text-indent:0px !important;
+	border-left:10px solid #999 !important;
+}
+.alert0, .article-text p#alert0 {
+	line-height:24px !important; margin:17px 1em !important; padding:12px !important;
+	font-size:14px !important; text-indent:0px !important;
+	background-color:#ffc !important; border:1px dashed #ff0 !important; border-radius:3px !important;
+}
+.alert1, .article-text p#alert1 {
+	line-height:24px !important; margin:17px 1em !important; padding:8px 8px 8px 45px !important;
+	font-size:14px; text-indent:0px; font-weight:bold;
+	background-color:#ccf !important; background-image:url(images/alert1.png) !important; background-repeat:no-repeat !important;
+	border:1px solid #99f !important; border-radius:3px !important;
+}
+.alert2, .article-text p#alert2 {
+	line-height:24px !important; margin:17px 1em !important; padding:8px 8px 8px 45px !important;
+	font-size:14px !important; text-indent:0px !important; font-weight:bold !important;
+	background-color:#ff9 !important; background-image:url(images/alert2.png) !important; background-repeat:no-repeat !important;
+	border:1px solid #ff0 !important; border-radius:3px !important;
+}
+.alert3, .article-text p#alert3 {
+	line-height:24px !important; margin:17px 1em !important; padding:8px 8px 8px 45px !important;
+	font-size:14px !important; text-indent:0px !important; font-weight:bold !important;
+	background-color:#f66 !important; background-image:url(images/alert3.png) !important; background-repeat:no-repeat !important;
+	border:1px solid #c33 !important; border-radius:3px !important;
+}
+.preview .alert0, .preview #alert0,
+.preview .alert1, .preview #alert1,
+.preview .alert2, .preview #alert2,
+.preview .alert3, .preview #alert3 {
+	display:none;
 }
 .article-text code {
 	margin:0px 5px; padding:2px 5px;
@@ -304,9 +341,9 @@ p {
 	font-family:Consolas,Monospace; font-size:14px; color:white;
 	background-color:#444; border-radius:3px; border:1px solid #333; border-bottom:none;
 }
-.article-text pre#autobreak {
-	word-wrap:break-word;
-	white-space:pre-wrap; white-space:-moz-pre-wrap; white-space:-pre-wrap; white-space:-o-pre-wrap;
+.autobreak, .article-text pre#autobreak {
+	word-wrap:break-word !important;
+	white-space:pre-wrap !important; white-space:-moz-pre-wrap !important; white-space:-pre-wrap !important; white-space:-o-pre-wrap !important;
 }
 .article-text blockquote {
 	line-height:26px; margin:17px 1em; padding:20px 45px 5px 45px;
@@ -317,40 +354,6 @@ p {
 .article-text blockquote p {
 	line-height:26px; margin:0px; font-size:14px; text-indent:0px;
 }
-.article-text p#side {
-	line-height:22px; margin:17px 1em; padding:8px;
-	font-size:14px; text-indent:0px;
-	border-left:10px solid #999;
-}
-.article-text p#alert1 {
-	line-height:24px; margin:17px 1em; padding:8px 8px 8px 45px;
-	font-size:14px; text-indent:0px; font-weight:bold;
-	background-color:#ccf; background-image:url(images/alert1.png); background-repeat:no-repeat;
-	border:1px solid #99f; border-radius:3px
-}
-.article-text p#alert2 {
-	line-height:24px; margin:17px 1em; padding:8px 8px 8px 45px;
-	font-size:14px; text-indent:0px; font-weight:bold;
-	background-color:#ff6; background-image:url(images/alert2.png); background-repeat:no-repeat;
-	border:1px solid #ff0; border-radius:3px
-}
-.article-text p#alert3 {
-	line-height:24px; margin:17px 1em; padding:8px 8px 8px 45px;
-	font-size:14px; text-indent:0px; font-weight:bold;
-	background-color:#f66; background-image:url(images/alert3.png); background-repeat:no-repeat;
-	border:1px solid #c33; border-radius:3px
-}
-.article-text p#picture {
-	line-height:normal; margin:17px 1em;
-	text-indent:0px; text-align:center;
-}
-.article-text p#picture img {
-	border:1px solid #666;
-}
-.article-text p#picture span {
-	line-height:32px; display:block;
-	color:#666; font-size:14px; font-weight:bold;
-}
 .article-text ul {
 	list-style:disc inside none;
 }
@@ -359,19 +362,13 @@ p {
 }
 .article-text li {
 	line-height:30px; margin:10px auto;
-	font-size:16px; text-indent:2em;
+	font-size:16px; padding-left:2em;
 }
-.article-text h5 {
-	line-height:32px; margin-top:34px;
-	background-color:#39C;
-	font-size:18px; color:white; text-indent:1em;
-}
-.article-text h6 {
-	line-height:30px; margin:10px 0px;
-	font-size:16px; font-weight:bold; color:#39c; text-indent:1.5em;
+.nomargin li, .article-text ul#nomargin li, .article-text ol#nomargin li {
+	margin:0px !important;
 }
 .article-text table {
-	width:90%; height:100%; margin:17px auto;
+	width:96%; height:100%; margin:17px auto;
 }
 .article-text th {
 	line-height:32px; background-color:#39c; border:1px solid white; color:white; font-size:15px;
@@ -380,6 +377,7 @@ p {
 	line-height:30px; padding-left:8px;
 	border:1px dotted #999; border-left:1px solid white; border-right:1px solid white;
 }
+
 /*********** article-comment ***********/
 .article-comment {
 	width:760px; position:relative;
@@ -393,6 +391,7 @@ p {
 	width:300px; height:350px; position:absolute; top:0px; right:0px;
 	background-color:#f6f6f6; border-bottom:1px solid #ccc; border-right:1px solid #ccc;
 }
+
 /*********** bottom ***********/
 .bottom {
 	width:756px; margin:0px auto; padding:15px; padding-bottom:0px;
@@ -402,7 +401,7 @@ p {
 	width:220px; float:left;
 }
 .bottom-box-large {
-	width:276px; float:left; margin:0px 20px;
+	width:266px; float:left; margin:0px 25px;
 }
 .bottom-title {
 	padding-bottom:10px; margin-bottom:10px;
@@ -427,11 +426,12 @@ p {
 .tagcloud a {
 	line-height:18px;
 }
+
 /*********** footer ***********/
 .footer {
-	width:786px; height:40px; margin:0px auto; padding-top:20px;
+	width:786px; height:40px; position:relative; margin:0px auto; padding-top:20px;
 	background-color:#333; border-top:1px solid #999;
-	font-size:13px;
+	font-size:14px;
 }
 .footer span {
 	margin-left:10px; color:#aaa;
@@ -441,4 +441,21 @@ p {
 }
 .footer a:hover {
 	color:#eee; text-decoration:none;
+}
+.leftbottom {
+	width:135px; height:80px; position:fixed; z-index:60; bottom:0px; left:33px; 
+}
+.loginout a {
+	line-height:20px; color:#36f !important;
+}
+.goto {
+	margin-top:10px;
+}
+.goto a {
+	width:135px; heihgt:50px; line-height:20px; display:block; padding:5px 0px;
+	text-align:center; color:#666 !important;
+	background-color:#dfdfdf; border-radius:5px 5px 0px 0px;
+}
+.goto a:hover {
+	text-decoration:none; background-color:#eee;
 }
