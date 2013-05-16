@@ -62,8 +62,7 @@
 					<ul>
 						<li><a href="./category/os/linux">Linux</a></li>
 						<li><a href="./category/coding">编程算法</a></li>
-						<li><a href="./category/problems">问题记录</a></li>
-						<li><a href="./category/it">IT杂谈</a></li>
+						<li><a href="./category/it_trend">IT杂谈</a></li>
 						<li><a href="./category/life">生活随记</a></li>
 					</ul>
 				</div>
@@ -75,8 +74,8 @@
 						<li><a href="./note" target="_blank">记事本（NoteBook）</a></li>
 						<li><a href="./bookmark" target="_blank">书签夹（Bookmarks）</a></li>
 						<li><a href="./motto" target="_blank">博客箴言（Motto）</a></li>
-						<li><a href="http://www.renren.com/siyanglee" target="_blank">人人主页（renren.com）</a></li>
-						<li><a href="#">GitHub项目（github.com）</a></li>
+						<li><a href="http://www.renren.com/siyanglee" target="_blank">人人主页</a></li>
+						<li><a href="https://github.com/seayanglee" target="_blank">GitHub项目</a></li>
 					</ul>
 				</div>
 			</li>
