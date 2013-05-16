@@ -79,10 +79,10 @@ h5 {
 	height:100px; position:relative;
 }
 .div_head_sitetitle a {
-	height:60px; position:absolute; top:15px; left:35px; display:inline-block; font-size:38px; font-style:italic; text-shadow:2px 2px 2px #666; color:white; -webkit-transition:color .5s linear; -moz-transition:color .5s linear; -o-transition:color .5s linear; transition:color .5s linear;
+	height:60px; position:absolute; top:15px; left:35px; display:inline-block; font-size:38px; font-style:italic; text-shadow:1px 1px 1px white; color:#555; -webkit-transition:color .5s linear; -moz-transition:color .5s linear; -o-transition:color .5s linear; transition:color .5s linear;
 }
 .div_head_sitetitle a:hover {
-	color:#FFD;
+	color:#39C !important;
 }
 .div_head_topbar {
 	width:1000px; height:60px; margin:auto;
@@ -132,10 +132,13 @@ h5 {
 	text-decoration:underline;
 }
 .div_content_posttext ul {
-	list-style:disc outside none;
+	list-style:disc inside none;
+}
+.div_content_posttext ol {
+	list-style:decimal inside none;
 }
 .div_content_posttext code {
-	border:1px solid #AAA; font-size:12px; background-color:#EEE; padding:3px 1px; margin:auto 2px;
+	border:1px solid #AAA; font-size:12px; background-color:#EEE; padding:1px; margin:auto 2px;
 }
 .div_content_posttext pre {
 	overflow:auto; border:1px solid #AAA; font-size:12px; background-color:#EEE; padding:3px;

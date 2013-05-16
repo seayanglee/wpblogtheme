@@ -294,9 +294,7 @@ function twentyten_comment( $comment, $args, $depth ) {
 	endswitch;
 }
 endif;
-?>
 
-<?php
 /*
  * Register widgetized areas, including two sidebars and four widget-ready columns in the footer.
  *
@@ -353,9 +351,7 @@ function twentyten_widgets_init() {
 }
 /** Register sidebars by running twentyten_widgets_init() on the widgets_init hook. */
 add_action( 'widgets_init', 'twentyten_widgets_init' );
-?>
 
-<?php
 /**
  * Removes the default styles that are packaged with the Recent Comments widget.
  *
@@ -372,9 +368,7 @@ function twentyten_remove_recent_comments_style() {
 	add_filter( 'show_recent_comments_widget_style', '__return_false' );
 }
 add_action( 'widgets_init', 'twentyten_remove_recent_comments_style' );
-?>
 
-<?php
 if ( ! function_exists( 'twentyten_posted_on' ) ) :
 /*
  * 打印当前文章的作者及时间，生成HTML代码

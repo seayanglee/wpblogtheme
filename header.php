@@ -25,10 +25,10 @@ $(document).ready(function () {
 	var containerdiv = $('#wrapper');
 	containerdiv.css('backgroundPosition', '0 0');
 	var bgscroll = function () {
-		var current = parseInt(containerdiv.css('backgroundPosition').split(' ')[0]), newBgPos = (current + 1) + 'px 0px';
+		var current = parseInt(containerdiv.css('backgroundPosition').split(' ')[0]), newBgPos = (current + 2) + 'px 0px';
 		containerdiv.css('backgroundPosition', newBgPos);
 	};
-	setInterval(bgscroll, 35);
+	setInterval(bgscroll, 50);
 });
 </script>
 <link rel="profile" href="http://gmpg.org/xfn/11" />

@@ -142,7 +142,7 @@ msgid "Sunset"
 msgstr ""
 
 #: functions.php:248 loop-attachment.php:104 loop.php:115 loop.php:143
-msgid "Continue reading..."
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #: functions.php:330
