@@ -9,7 +9,7 @@
 <?php get_header(); ?>
 <div class="main" role="main">
 	<div class="article">
-		<?php get_template_part( 'loop', 'single' ); ?>
+		<?php get_template_part('loop', 'single'); ?>
 	</div><!-- END .article -->
 	<div class="article">
 		<div class="article-comment">

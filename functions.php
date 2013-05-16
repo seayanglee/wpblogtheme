@@ -142,7 +142,7 @@ if (!function_exists('mytheme_posted_in')) :
  */
 function mytheme_posted_in() {
 	if (count(get_the_category())) {
-		printf('<label>分类：</label>%1$s', get_the_category_list( ' ' ));
+		printf('<label>分类：</label>%1$s', get_the_category_list(' '));
 	}
 	$tag_list = get_the_tag_list('<span name="tags">', '</span> <span name="tags">', '</span>');
 	if ($tag_list) {

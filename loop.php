@@ -9,7 +9,7 @@
 <?php while(have_posts()) : the_post(); ?>
 	<div class="article">
 		<div class="article-content">
-			<h2 class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+			<h2 class="article-title"><a href="<?php the_permalink(); ?>" target="_blank"><?php the_title(); ?></a></h2>
 			<div class="article-text">
 			<?php the_content('阅读全文...'); ?>
 			</div><!-- END .article-text -->

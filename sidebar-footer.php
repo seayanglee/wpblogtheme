@@ -12,10 +12,8 @@
 		&& !is_active_sidebar('third-footer-widget-area')
 	)
 		return;
+	if(is_active_sidebar('first-footer-widget-area')):
 ?>
-
-<div id="footer-widget-area" role="complementary">
-<?php if(is_active_sidebar('first-footer-widget-area')): ?>
 	<div id="first" class="bottom-box-middle">
 		<?php dynamic_sidebar('first-footer-widget-area'); ?>
 	</div><!-- END .bottom-box-middle -->
@@ -34,4 +32,3 @@
 		<?php dynamic_sidebar('third-footer-widget-area'); ?>
 	</div><!-- END .bottom-box-middle -->
 <?php endif; ?>
-</div><!-- END #footer-widget-area -->
