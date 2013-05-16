@@ -15,14 +15,14 @@
 	</header>
 <?php
 while(have_posts()) :
-	the_post();
-	get_template_part('content', 'category');
+		the_post();
+		get_template_part('content', 'category');
+	endwhile;
 	if($wp_query->max_num_pages > 1) : ?>
-	<nav class="section pagenav">
-		<?php postbar(); ?>
-	</nav>
-	<?php endif; 
-endwhile;
+		<nav class="section pagenav">
+			<?php postbar(); ?>
+		</nav>
+	<?php endif;
 else : ?>
 	<header class="section fore">
 		<p class="fore-text">Sorry，没有查询到相关内容的文章！</p>

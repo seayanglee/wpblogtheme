@@ -31,7 +31,7 @@
 				'email'  => '<p><input id="email" name="email" type="text" value="'.esc_attr($commenter['comment_author_email']).'" placeholder="邮箱 Email'.($req?' (必填 Required)"':'"').$aria_req.'/></p>',
 				'url'    => '<p><input id="url" name="url" type="text" value="'.esc_attr($commenter['comment_author_url']).'" placeholder="站点 Link"'.$aria_req.'/></p>',
 			),
-			'comment_field'        => '<p><textarea id="comment" name="comment" aria-required="true" placeholder="请不要吝惜您的文字 Your response here"></textarea></p>',
+			'comment_field'        => '<p><textarea id="comment" name="comment" aria-required="true" placeholder="随便留点什么吧~~请不要吝惜您的文字 Your response here"></textarea></p>',
 			'must_log_in'          => '<p>'.sprintf('请先<a href="%s">登录 (login)</a>发表留言', wp_login_url(apply_filters('the_permalink', get_permalink($post_id)))).'</p>',
 			'logged_in_as'         => '<p>'.sprintf('以<a href="%1$s">%2$s</a>身份留言，<a href="%3$s" title="Log out of this account">退出登录 (logout)</a>', admin_url('profile.php'), $user_identity, wp_logout_url(apply_filters('the_permalink', get_permalink($post_id)))).'</p>',
 			'comment_notes_before' => '',

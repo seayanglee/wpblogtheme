@@ -200,11 +200,11 @@ table{
 .article-title{
 	line-height:38px; font-size:22px; color:#333; margin-top:3px;
 }
-.article-title a{
-	color:#369;
+.article-title a,.more-link{
+	color:#369 !important; border:none !important;
 }
-.article-title a:hover{
-	color:#36f;
+.article-title a:hover,.more-link:hover{
+	color:#36f !important;
 }
 .article-meta{
 	line-height:46px; text-align:center;
@@ -299,18 +299,21 @@ table{
 	background:#f66; background-image:url("images/alert3.png"); background-repeat:no-repeat;
 	border:1px solid #c33; border-radius:3px;
 }
-.picture, .article-content p#picture {
+.picture, .article-content p#picture{
 	line-height:0px !important; margin:14px 32px !important;
 	text-indent:0px !important; text-align:center;
 }
-.picture img, .article-content p#picture img {
+.picture a, .article-content p#picture a{
+	border:none !important;
+}
+.picture img, .article-content p#picture img{
 	border:1px solid #666;
 }
-.picture span, .article-content p#picture span {
+.picture span, .article-content p#picture span{
 	line-height:28px !important; display:block;
 	font-size:14px; font-weight:bold; color:#666;
 }
-.side, .article-content p#side {
+.side, .article-content p#side{
 	line-height:22px !important; margin:14px 32px !important; padding:8px;
 	font-size:14px; text-indent:0px !important; border-left:10px solid #999;
 }
@@ -327,7 +330,7 @@ table{
 	white-space:pre-wrap !important;
 }
 .article-content blockquote{
-	margin:14px 32px; padding:24px 7px 5px 36px; font-size:14px; border-radius:3px;
+	margin:14px 32px; padding:5px 8px 5px 36px; font-size:14px; border-radius:3px;
 	background:#ddd; background-image:url("images/blockquote.png"); background-repeat:no-repeat;
 }
 .article-content blockquote p{
@@ -359,8 +362,11 @@ table{
 	padding:3px 6px; border-radius:3px; background:#333;
 	font-family:Consolas,Monospace; font-size:14px; color:white; font-style:italic;
 }
+.article-content a{
+	color:black; border-bottom:1px dashed #666;
+}
 .article-content a:hover{
-	text-decoration:underline;
+	color:#36f; border-bottom:1px dashed #36f;
 }
 .article-content del{
 	color:#999;
@@ -388,17 +394,17 @@ table{
 	margin-left:65px;
 }
 .comment-content article{
-	min-height:56px; padding:12px 0px; border-bottom:1px dotted #333;
+	min-height:56px; padding:15px 0px; border-bottom:1px dotted #999;
 }
 .comment-content header{
-	height:30px; line-height:30px; position:relative; font-size:13px;
+	height:30px; line-height:30px; position:relative; font-size:13px; color:#666;
 }
 .comment-userimg{
 	width:48px; height:48px; position:absolute; padding:3px;
 	border:1px solid #999; border-radius:3px; background:#f8f8f8;
 }
 .comment-content-text{
-	line-height:26px; margin-left:65px; font-size:15px;
+	line-height:24px; margin-left:65px; font-size:15px;
 }
 .comment-add{}
 .comment-add p{
@@ -416,7 +422,7 @@ table{
 	border-color:#39c;
 }
 .comment-add input[type=submit]{
-	width:120px; height:28px; line-height:28px;
+	width:120px; height:28px; line-height:28px; cursor:pointer;
 	background:#39c; color:white; border:1px solid #39c; border-radius:3px;
 }
 .comment-add input[type=submit]:hover{

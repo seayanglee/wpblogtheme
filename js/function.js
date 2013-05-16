@@ -138,10 +138,10 @@ window.onresize = function() {
 	if(document.body.scrollWidth <= 1000) {
 		document.getElementById('header').style.position = 'absolute';
 		document.getElementById('menubar').style.position = 'absolute';
-		document.getElementById('menubar').style.cssText = 'position:"absolute"; left:"-200px;"';
-		document.getElementById('respond').style.cssText = 'position:"static"';
+		document.getElementById('btnbar').style.cssText = 'position:absolute; left:-200px;';
+		document.getElementById('respond').style.cssText = 'position:static;';
 		document.getElementById('respond').className = 'comment-add comment-add-full';
-		document.getElementById('response').style.cssText = "width:auto; min-height:auto;";
+		document.getElementById('response').style.cssText = 'width:auto; min-height:auto;';
 	}
 	else {
 		document.getElementById('header').removeAttribute('style');
