@@ -15,7 +15,7 @@ header,section,footer,aside,nav,article{
 	display:block;
 }
 body{
-	font-family:'微软雅黑','文泉驿正黑','宋体'; font-size:14px;
+	font-family:'文泉驿正黑','微软雅黑'; font-size:14px;
 }
 a{
 	color:#36f; text-decoration:none;
