@@ -375,9 +375,13 @@ table{
 .nomargin li,.article-content #nomargin li{
 	margin:0px !important;
 }
-.preview h3,.preview h4,.preview h5,.preview h6{
+.preview h3,.preview h4{
 	padding:0px !important; background:white !important;
-	font-size:16px !important; color:black !important; font-weight:bold !important;
+	font-size:18px !important; color:black !important; font-weight:normal !important;
+}
+.preview h5,.preview h6{
+	padding:0px !important; background:white !important;
+	font-size:16px !important; color:black !important; font-weight:normal !important;
 }
 .preview .alert0,.preview #alert0,.preview .alert1, .preview #alert1,
 .preview .alert2,.preview #alert2,.preview .alert3,.preview #alert3{
